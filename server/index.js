@@ -16,9 +16,26 @@ const corsOrigins = (process.env.CORS_ORIGIN || "")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
+
+function corsOrigin(origin, cb) {
+  if (!origin) return cb(null, true);
+  if (corsOrigins.includes(origin)) return cb(null, true);
+  // Vercel preview URL'leri (hash'li *.vercel.app) — CORS_ORIGIN'de tek tek yazmana gerek kalmaz
+  if (process.env.CORS_ALLOW_VERCEL !== "0") {
+    try {
+      const u = new URL(origin);
+      if (u.protocol === "https:" && u.hostname.endsWith(".vercel.app")) return cb(null, true);
+    } catch {
+      /* ignore */
+    }
+  }
+  if (corsOrigins.length === 0) return cb(null, true);
+  return cb(new Error("Not allowed by CORS"));
+}
+
 app.use(
   cors({
-    origin: corsOrigins.length ? corsOrigins : true,
+    origin: corsOrigin,
     allowedHeaders: ["Authorization", "Content-Type", "Accept"],
   }),
 );

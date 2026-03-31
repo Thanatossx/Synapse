@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "migrate:json": "node scripts/migrate-from-json.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
     "cors": "^2.8.6",
     "express": "^5.1.0"
   }

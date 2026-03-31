@@ -2,7 +2,8 @@
   "name": "synax",
   "private": true,
   "version": "1.0.0",
-  "description": "SYNAX underground rave site — React (Vite) + Express",
+  "type": "module",
+  "description": "SYNAX — Vite + Express API (Vercel Serverless + Supabase)",
   "scripts": {
     "dev": "npm run dev --prefix client",
     "dev:server": "node server/index.js",

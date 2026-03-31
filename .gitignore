@@ -1,1 +1,3 @@
 server/data/store.json
+.env
+server/.env

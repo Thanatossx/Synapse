@@ -1,4 +1,4 @@
-/** Boş = aynı origin (lokalde Vite proxy). Production'da Vercel'de Render URL'i: VITE_API_BASE */
+/** Boş = aynı origin (Vercel’de /api; lokalde Vite → Express proxy). Ayrı API domain’i için VITE_API_BASE kullan. */
 function apiBase(): string {
   const raw = import.meta.env.VITE_API_BASE as string | undefined;
   if (!raw) return "";

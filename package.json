@@ -1,0 +1,17 @@
+{
+  "name": "synapse",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SYNAPSE underground rave site — React (Vite) + Express",
+  "scripts": {
+    "dev": "npm run dev --prefix client",
+    "dev:server": "node server/index.js",
+    "dev:all": "concurrently -n api,vite -c magenta,cyan \"node server/index.js\" \"wait-on tcp:127.0.0.1:3000 && npm run dev\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "wait-on": "^9.0.4"
+  }
+}

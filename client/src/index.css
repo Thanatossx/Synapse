@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@theme {
+  --font-synapse: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-synapse-root: #2c1249;
+  --color-synapse-black: #000000;
+  --color-synapse-text: #f9f9f9;
+  --color-synapse-muted: #dfdfdf;
+  --color-synapse-btn-gray: #7f7f7f;
+  --color-synapse-btn-primary: #353b57;
+  --color-synapse-card: rgba(255, 255, 255, 0.158);
+}
+
+/* Hero spotlar — mix-blend + yumuşak nefes (opacity; transform korunur) */
+.synapse-hero-spot-wrap {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.synapse-spot-layers {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  width: min(96vw, 640px);
+  height: min(42vw, 220px);
+  max-height: 240px;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .synapse-spot-layers {
+    width: min(90vw, 720px);
+    height: min(38vw, 260px);
+    max-height: 280px;
+  }
+}
+
+.synapse-spot {
+  position: absolute;
+  top: 50%;
+  mix-blend-mode: screen;
+}
+
+@keyframes synapse-spot-sway {
+  0%,
+  100% {
+    opacity: 0.82;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes synapse-spot-sway-hard {
+  0%,
+  100% {
+    opacity: 0.88;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Geniş atmosferik koni (yumuşak) — soldan sahneye */
+.synapse-spot--left-soft {
+  left: -12%;
+  width: 58%;
+  height: 220%;
+  transform-origin: 0% 50%;
+  transform: translateY(-50%) rotate(26deg) skewY(-2deg);
+  background: linear-gradient(
+    100deg,
+    rgba(220, 200, 255, 0.38) 0%,
+    rgba(147, 92, 255, 0.16) 38%,
+    rgba(91, 33, 182, 0.04) 58%,
+    transparent 76%
+  );
+  filter: blur(26px);
+  animation: synapse-spot-sway 11s ease-in-out infinite;
+}
+
+/* Dar parlak gövde — spot merkezi */
+.synapse-spot--left-hard {
+  left: -4%;
+  width: 22%;
+  height: 85%;
+  transform-origin: 0% 50%;
+  transform: translateY(-50%) rotate(24deg) skewY(-1deg);
+  background: linear-gradient(
+    100deg,
+    rgba(250, 245, 255, 0.55) 0%,
+    rgba(192, 160, 255, 0.2) 42%,
+    transparent 72%
+  );
+  filter: blur(10px);
+  animation: synapse-spot-sway-hard 9s ease-in-out infinite;
+}
+
+.synapse-spot--right-soft {
+  right: -12%;
+  width: 58%;
+  height: 220%;
+  transform-origin: 100% 50%;
+  transform: translateY(-50%) rotate(-26deg) skewY(2deg);
+  background: radial-gradient(
+      ellipse 45% 80% at 100% 50%,
+      rgba(230, 210, 255, 0.28) 0%,
+      rgba(139, 92, 246, 0.12) 42%,
+      transparent 72%
+    ),
+    linear-gradient(
+      260deg,
+      rgba(210, 180, 255, 0.35) 0%,
+      rgba(120, 70, 220, 0.1) 45%,
+      transparent 74%
+    );
+  filter: blur(26px);
+  animation: synapse-spot-sway 11s ease-in-out infinite 1.2s;
+}
+
+.synapse-spot--right-hard {
+  right: -4%;
+  width: 22%;
+  height: 85%;
+  transform-origin: 100% 50%;
+  transform: translateY(-50%) rotate(-24deg) skewY(1deg);
+  background: linear-gradient(
+    260deg,
+    rgba(252, 248, 255, 0.5) 0%,
+    rgba(180, 150, 255, 0.18) 45%,
+    transparent 74%
+  );
+  filter: blur(10px);
+  animation: synapse-spot-sway-hard 9s ease-in-out infinite 0.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .synapse-spot--left-soft,
+  .synapse-spot--left-hard,
+  .synapse-spot--right-soft,
+  .synapse-spot--right-hard {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Başlık glow — sabit text-shadow (animasyon her karede repaint yapıyordu) */
+.synapse-hero-title-glow {
+  color: #faf8ff;
+  text-shadow:
+    0 0 12px rgba(221, 214, 254, 0.85),
+    0 0 28px rgba(167, 139, 250, 0.55),
+    0 0 48px rgba(139, 92, 246, 0.32),
+    0 0 72px rgba(91, 33, 182, 0.18);
+}
+
+.synapse-cta-title-glow {
+  color: #faf8ff;
+  text-shadow:
+    0 0 10px rgba(196, 181, 254, 0.65),
+    0 0 22px rgba(139, 92, 246, 0.38),
+    0 0 40px rgba(91, 33, 182, 0.2);
+}
+
+.synapse-about-title-glow {
+  color: #faf8ff;
+  text-shadow:
+    0 0 10px rgba(196, 181, 254, 0.55),
+    0 0 22px rgba(139, 92, 246, 0.34),
+    0 0 38px rgba(91, 33, 182, 0.18);
+}
+
+/* Hızlı kaydırmada smooth-scroll jank yapabiliyor — kapalı */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: var(--color-synapse-root);
+  font-family: var(--font-synapse);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100dvh;
+}

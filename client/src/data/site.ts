@@ -4,7 +4,7 @@ export const SITE = {
   name: "SYNAX",
   email: "ahmetefeozturk010@gmail.com",
   orgDescription:
-    "SYNAX is an immersive underground rave platform based in Amsterdam. Dark aesthetic, purple and black palette.",
+    "SYNAX is an immersive underground rave platform based in Los Santos. Dark aesthetic, purple and black palette.",
 } as const;
 
 export const NAV = [
@@ -75,7 +75,7 @@ export const TEAM = [
     name: "Sophie Verlaan",
     role: "Events and Operations Manager",
     description:
-      "Manages logistics and execution of SYNAX events across Amsterdam venues.",
+      "Manages logistics and execution of SYNAX events across Los Santos venues.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/generated-content/headshots/955ca6ca-f417-46f5-b5d6-46ecd8046b80.png",
   },
@@ -86,13 +86,13 @@ export const TESTIMONIALS = [
     quote:
       "Working with SYNAX brought our underground music community closer together.",
     name: "Alex van der Berg",
-    title: "Founder, Amsterdam Underground Collective",
+    title: "Founder, Los Santos Underground Collective",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/generated-content/headshots/9e5a7de4-3619-4bc4-92ca-91444a928fc6.png",
   },
   {
     quote:
-      "SYNAX understands what makes the Amsterdam electronic music scene special.",
+      "SYNAX understands what makes the Los Santos electronic music scene special.",
     name: "Marina Kowalski",
     title: "Venue Manager, North Holland Music Space",
     image:
@@ -110,7 +110,7 @@ export const TESTIMONIALS = [
     quote:
       "Synax's focus on creating immersive experiences matches our mission.",
     name: "Sophie Mercier",
-    title: "Creative Director, Amsterdam Visuals Collective",
+    title: "Creative Director, Los Santos Visuals Collective",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/generated-content/headshots/c8880a8b-f588-48a3-abd7-31964200eb25.png",
   },
@@ -119,7 +119,7 @@ export const TESTIMONIALS = [
 export const FAQ_EN = [
   {
     q: "What kind of events does SYNAX host?",
-    a: "SYNAX creates immersive underground rave experiences in Amsterdam with curated lineups and a full sensory experience.",
+    a: "SYNAX creates immersive underground rave experiences in Los Santos with curated lineups and a full sensory experience.",
   },
   {
     q: "How do I buy tickets?",
@@ -127,7 +127,7 @@ export const FAQ_EN = [
   },
   {
     q: "Where does SYNAX host its events?",
-    a: "Amsterdam underground venues — see /events for locations.",
+    a: "Los Santos underground venues — see /events for locations.",
   },
 ] as const;
 

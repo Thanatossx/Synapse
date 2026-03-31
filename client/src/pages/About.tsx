@@ -24,10 +24,10 @@ export function About() {
                 className="synax-about-title-glow whitespace-pre-line font-bold leading-tight text-[#faf8ff]"
                 style={{ fontSize: "clamp(1.75rem, 3cqi + 1rem, 2.5rem)" }}
               >
-                {`From Amsterdam's\nUnderground to\nImmersive Reality`}
+                {`From Los Santos's\nUnderground to\nImmersive Reality`}
               </h1>
               <p className="synax-cta-sub-glow max-w-xl text-[15px] leading-relaxed text-white/85 md:text-base">
-                SYNAX started as a vision to bring Amsterdam&apos;s most authentic electronic music
+                SYNAX started as a vision to bring Los Santos&apos;s most authentic electronic music
                 experiences to life. We built a platform that connects underground artists with
                 passionate dance floor seekers.
               </p>
@@ -73,7 +73,7 @@ export function About() {
               </h2>
             </div>
             <p className="synax-cta-sub-glow md:w-1/2 text-[15px] leading-relaxed text-white/85 md:text-base">
-              SYNAX exists to bring Amsterdam&apos;s underground music community together through
+              SYNAX exists to bring Los Santos&apos;s underground music community together through
               immersive rave experiences. We believe in authentic connection, bold creativity, and
               events that stay with you long after the music stops.
             </p>
@@ -92,7 +92,7 @@ export function About() {
                 The people shaping SYNAX
               </h2>
               <p className="mt-4 max-w-2xl text-white/80">
-                A small but passionate team dedicated to bringing Amsterdam&apos;s underground music
+                A small but passionate team dedicated to bringing Los Santos&apos;s underground music
                 scene to life.
               </p>
             </div>

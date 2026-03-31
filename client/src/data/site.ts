@@ -11,7 +11,7 @@ export const NAV = [
   { to: "/", label: "Anasayfa" },
   { to: "/events", label: "Etkinlikler" },
   { to: "/tickets", label: "Bilet ve Kurallar" },
-  { to: "/bracelet", label: "Bracelets Culture" },
+  { to: "/bracelet", label: "Bileklik Kültürü" },
 ] as const;
 
 export const FOOTER_NAV = [

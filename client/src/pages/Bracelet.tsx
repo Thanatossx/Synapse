@@ -75,7 +75,7 @@ export function Bracelet() {
         <div className="mx-auto max-w-[1536px] px-6 py-16 md:py-24">
           <div className="mb-12 max-w-3xl md:mb-14">
             <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-violet-200/55">
-              Bracelets Culture
+              Bileklik Kültürü
             </span>
             <h1
               className="synax-about-title-glow mt-3 font-bold text-[#faf8ff]"

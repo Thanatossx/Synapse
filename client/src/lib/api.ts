@@ -1,4 +1,11 @@
-const BASE = "";
+/** Boş = aynı origin (lokalde Vite proxy). Production'da Vercel'de Render URL'i: VITE_API_BASE */
+function apiBase(): string {
+  const raw = import.meta.env.VITE_API_BASE as string | undefined;
+  if (!raw) return "";
+  return raw.replace(/\/+$/, "");
+}
+
+const BASE = apiBase();
 
 export async function apiGet<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {

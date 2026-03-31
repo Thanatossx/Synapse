@@ -78,13 +78,13 @@ export function Bracelet() {
               Bracelets Culture
             </span>
             <h1
-              className="synapse-about-title-glow mt-3 font-bold text-[#faf8ff]"
+              className="synax-about-title-glow mt-3 font-bold text-[#faf8ff]"
               style={{ fontSize: "clamp(1.75rem, 3cqi + 1rem, 2.25rem)" }}
             >
               Her şeyin bir anlamı var.
             </h1>
-            <p className="synapse-cta-sub-glow mt-6 text-[15px] leading-relaxed text-white/85 md:text-base">
-              SYNAPSE partilerinde katılımcılar, farklı renklerde Kandi bileklikler takarak kendilerini
+            <p className="synax-cta-sub-glow mt-6 text-[15px] leading-relaxed text-white/85 md:text-base">
+              SYNAX partilerinde katılımcılar, farklı renklerde Kandi bileklikler takarak kendilerini
               ve sınırlarını ifade ederler. Bu sistem, partinin kaotik enerjisinde iletişim kurmayı
               kolaylaştırır ve yanlış anlaşılmaları önler. Her renk, katılımcının niyetini, sosyal veya
               romantik yaklaşımını temsil eder. Kısaca, Kandi bileklik kültürü bir tür görsel sosyal

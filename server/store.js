@@ -52,7 +52,7 @@ const DEFAULT_STORE = () => ({
   bracelets: [
     {
       id: "br-1",
-      title: "SYNAPSE - Black Kandi Bracelet",
+      title: "SYNAX - Black Kandi Bracelet",
       description:
         "Organizatörler veya sahneye yakın VIP'ler. Ortamı yöneten lead raverler.",
       image:
@@ -60,7 +60,7 @@ const DEFAULT_STORE = () => ({
     },
     {
       id: "br-2",
-      title: "SYNAPSE - Red Kandi Bracelet",
+      title: "SYNAX - Red Kandi Bracelet",
       description:
         "İlişki aramayanlar, yalnız takılmak isteyenler için sınır belirten bileklik.",
       image:
@@ -68,7 +68,7 @@ const DEFAULT_STORE = () => ({
     },
     {
       id: "br-3",
-      title: "SYNAPSE - Blue Kandi Bracelet",
+      title: "SYNAX - Blue Kandi Bracelet",
       description:
         "Sadece cinsel açıdan etkileşim arayanlar için görsel iletişim rengi.",
       image:
@@ -76,7 +76,7 @@ const DEFAULT_STORE = () => ({
     },
     {
       id: "br-4",
-      title: "SYNAPSE - Green Kandi Bracelet",
+      title: "SYNAX - Green Kandi Bracelet",
       description:
         "İlişki arayan, PLUR ruhunu benimseyen ve pozitif enerji yayan kişiler.",
       image:
@@ -84,14 +84,14 @@ const DEFAULT_STORE = () => ({
     },
     {
       id: "br-5",
-      title: "SYNAPSE - Rainbow Kandi Bracelet",
+      title: "SYNAX - Rainbow Kandi Bracelet",
       description: "Açık fikirli, her türlü enerjiyi ve çeşitliliği kucaklayanlar.",
       image:
         "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/Untitled%20%283%29-81v2qKX1fdasnJlnsfWLlEDcDwWn6h.png",
     },
     {
       id: "br-6",
-      title: "SYNAPSE - Yellow Kandi Bracelet",
+      title: "SYNAX - Yellow Kandi Bracelet",
       description:
         "İlk kez rave deneyimi yaşayanlar veya yeni katılımcılar için destek rengi.",
       image:
@@ -160,7 +160,7 @@ export async function readStore() {
               type: "textarea",
               label: "Kimlerle geliyorsunuz? (İsimler veya kısa bilgi)",
               required: false,
-              placeholder: "Örn: Ali, Ayşe",
+              placeholder: "Yanıtınız",
             },
             {
               id: `q-${crypto.randomUUID()}`,

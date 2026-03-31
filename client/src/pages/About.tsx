@@ -21,13 +21,13 @@ export function About() {
           <div className="mx-auto grid max-w-[1536px] gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:py-24">
             <div className="flex flex-col gap-6">
               <h1
-                className="synapse-about-title-glow whitespace-pre-line font-bold leading-tight text-[#faf8ff]"
+                className="synax-about-title-glow whitespace-pre-line font-bold leading-tight text-[#faf8ff]"
                 style={{ fontSize: "clamp(1.75rem, 3cqi + 1rem, 2.5rem)" }}
               >
                 {`From Amsterdam's\nUnderground to\nImmersive Reality`}
               </h1>
-              <p className="synapse-cta-sub-glow max-w-xl text-[15px] leading-relaxed text-white/85 md:text-base">
-                SYNAPSE started as a vision to bring Amsterdam&apos;s most authentic electronic music
+              <p className="synax-cta-sub-glow max-w-xl text-[15px] leading-relaxed text-white/85 md:text-base">
+                SYNAX started as a vision to bring Amsterdam&apos;s most authentic electronic music
                 experiences to life. We built a platform that connects underground artists with
                 passionate dance floor seekers.
               </p>
@@ -72,8 +72,8 @@ export function About() {
                 {`We create spaces where\nthe underground comes alive`}
               </h2>
             </div>
-            <p className="synapse-cta-sub-glow md:w-1/2 text-[15px] leading-relaxed text-white/85 md:text-base">
-              SYNAPSE exists to bring Amsterdam&apos;s underground music community together through
+            <p className="synax-cta-sub-glow md:w-1/2 text-[15px] leading-relaxed text-white/85 md:text-base">
+              SYNAX exists to bring Amsterdam&apos;s underground music community together through
               immersive rave experiences. We believe in authentic connection, bold creativity, and
               events that stay with you long after the music stops.
             </p>
@@ -89,7 +89,7 @@ export function About() {
                 Meet the team
               </span>
               <h2 className="mt-3 font-semibold text-[#faf8ff]" style={{ fontSize: "clamp(1.5rem, 2cqi + 1rem, 2rem)" }}>
-                The people shaping SYNAPSE
+                The people shaping SYNAX
               </h2>
               <p className="mt-4 max-w-2xl text-white/80">
                 A small but passionate team dedicated to bringing Amsterdam&apos;s underground music
@@ -131,7 +131,7 @@ export function About() {
                 Our partners
               </span>
               <h2 className="mt-3 whitespace-pre-line font-semibold text-[#faf8ff]" style={{ fontSize: "clamp(1.5rem, 2cqi + 1rem, 2rem)" }}>
-                {`Collaborations that\nmake SYNAPSE real`}
+                {`Collaborations that\nmake SYNAX real`}
               </h2>
             </div>
             <div className="grid gap-8 md:grid-cols-2">
@@ -167,9 +167,9 @@ export function About() {
         <BlackSection>
           <div className="mx-auto max-w-[1536px] px-6 py-16 md:py-20">
             <h2 className="font-semibold text-[#faf8ff]" style={{ fontSize: "clamp(1.5rem, 2cqi + 1rem, 2rem)" }}>
-              SYNAPSE FAQ
+              SYNAX FAQ
             </h2>
-            <p className="mt-2 text-white/75">Find answers to common questions about SYNAPSE events</p>
+            <p className="mt-2 text-white/75">Find answers to common questions about SYNAX events</p>
             <div className="mt-8 flex flex-col gap-2">
               {FAQ_EN.map((item, i) => (
                 <div key={item.q} className="overflow-hidden rounded-lg border border-violet-500/15 bg-white/[0.02]">
@@ -200,7 +200,7 @@ export function About() {
               Get in touch
             </span>
             <h2 className="mt-3 whitespace-pre-line font-semibold text-[#faf8ff]" style={{ fontSize: "clamp(1.5rem, 2cqi + 1rem, 2rem)" }}>
-              {`Join the SYNAPSE\ncommunity`}
+              {`Join the SYNAX\ncommunity`}
             </h2>
             <p className="mt-4 max-w-xl text-white/80">
               Reach out with questions about events, tickets, or partnerships.

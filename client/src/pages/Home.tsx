@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { IMAGES } from "../data/site";
 
-const BRAND_LOGO_ALT = "SYNAPSE logo";
+const BRAND_LOGO_ALT = "SYNAX logo";
 
 function BlackSection({
   children,
@@ -24,27 +24,27 @@ export function Home() {
       <section id="hero" className="w-full">
         <BlackSection overflow="visible">
           <div className="mx-auto flex max-w-[1536px] flex-col px-6 py-10 md:py-16 lg:py-20">
-            <div className="synapse-hero-spot-wrap pb-8 text-center md:pb-12 lg:pb-16">
-              <div className="synapse-spot-layers" aria-hidden>
-                <div className="synapse-spot synapse-spot--left-soft" />
-                <div className="synapse-spot synapse-spot--left-hard" />
-                <div className="synapse-spot synapse-spot--right-soft" />
-                <div className="synapse-spot synapse-spot--right-hard" />
+            <div className="synax-hero-spot-wrap pb-8 text-center md:pb-12 lg:pb-16">
+              <div className="synax-spot-layers" aria-hidden>
+                <div className="synax-spot synax-spot--left-soft" />
+                <div className="synax-spot synax-spot--left-hard" />
+                <div className="synax-spot synax-spot--right-soft" />
+                <div className="synax-spot synax-spot--right-hard" />
               </div>
               <h1
-                className="synapse-hero-title-glow relative z-[1] max-w-3xl text-balance font-bold leading-tight tracking-[0em] antialiased md:leading-[1.08]"
+                className="synax-hero-title-glow relative z-[1] max-w-3xl text-balance font-bold leading-tight tracking-[0em] antialiased md:leading-[1.08]"
                 style={{
                   fontSize: "clamp(2rem, 5cqi + 1.5rem, 3.75rem)",
                 }}
               >
-                <span className="block">welcome… are we</span>
-                <span className="mt-1 block md:mt-1.5">Synapse, the dark side.</span>
+                <span className="block">welcome… we are</span>
+                <span className="mt-1 block md:mt-1.5">Synax, the dark side.</span>
               </h1>
             </div>
 
             <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-14 lg:gap-20">
               {/* Sol: logo */}
-              <div className="synapse-intro-logo order-1 flex justify-center md:justify-start">
+              <div className="synax-intro-logo order-1 flex justify-center md:justify-start">
                 <div className="relative w-full max-w-[300px] md:max-w-[340px]">
                   <div
                     className="pointer-events-none absolute -inset-4 rounded-[28px] bg-[radial-gradient(ellipse_80%_70%_at_50%_0%,rgba(139,92,246,0.35)_0%,transparent_65%)] opacity-90 blur-xl"
@@ -71,7 +71,7 @@ export function Home() {
               {/* Sağ: metin */}
               <div className="order-2 flex flex-col items-center gap-7 text-center md:items-end md:text-right">
                 <p className="max-w-md text-[15px] leading-relaxed text-[#dfdfdf] md:max-w-lg md:text-base md:leading-relaxed">
-                  Synapse, yeraltı elektronik müzik ve rave kültürünün dijital izdüşümüdür. Biz bir
+                  Synax, yeraltı elektronik müzik ve rave kültürünün dijital izdüşümüdür. Biz bir
                   topluluk değil, enerjiyi ve ritmi paylaşan bir bilinç ağıyız. Bass, trance ve
                   psytrance ile gecenin karanlığında her şeyi dans pistinde birleşiyoruz.
                 </p>
@@ -99,12 +99,12 @@ export function Home() {
 
               <div className="relative z-10 flex flex-col items-center gap-4 text-center md:gap-5">
                 <h2
-                  className="synapse-cta-title-glow whitespace-pre-line text-balance font-semibold leading-[1.12] tracking-[-0.02em]"
+                  className="synax-cta-title-glow whitespace-pre-line text-balance font-semibold leading-[1.12] tracking-[-0.02em]"
                   style={{ fontSize: "clamp(1.35rem, 2.8cqi + 0.75rem, 2.15rem)" }}
                 >
                   {`BU BİR PARTİ DEĞİL\nBU BİR RAVE`}
                 </h2>
-                <p className="synapse-cta-sub-glow max-w-md whitespace-pre-line text-[14px] leading-snug text-white/82 text-balance md:text-[15px] md:leading-relaxed">
+                <p className="synax-cta-sub-glow max-w-md whitespace-pre-line text-[14px] leading-snug text-white/82 text-balance md:text-[15px] md:leading-relaxed">
                   {`Strobe. Bass. Karanlık.\nKendini sesin içinde kaybet.\nGirişler sınırlı.`}
                 </p>
                 <div className="mt-1 flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:justify-center md:mt-0">
@@ -147,13 +147,13 @@ export function Home() {
 
                 <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12 lg:gap-16">
                   <h2
-                    className="synapse-about-title-glow w-full whitespace-pre-line text-balance font-semibold uppercase leading-[1.15] tracking-[0.02em] md:max-w-[20rem] md:shrink-0 lg:max-w-[22rem]"
+                    className="synax-about-title-glow w-full whitespace-pre-line text-balance font-semibold uppercase leading-[1.15] tracking-[0.02em] md:max-w-[20rem] md:shrink-0 lg:max-w-[22rem]"
                     style={{ fontSize: "clamp(1.35rem, 2.5cqi + 0.85rem, 2.05rem)" }}
                   >
                     {`UNDERGROUND\nKÜLTÜRÜN NABZI`}
                   </h2>
-                  <p className="synapse-about-body-glow w-full text-[15px] leading-relaxed text-white/85 md:max-w-2xl md:flex-1 md:text-[16px] md:leading-[1.7]">
-                    SYNAPSE, ticari gürültüden uzak, gerçek underground rave kültürünü yaşatmak için
+                  <p className="synax-about-body-glow w-full text-[15px] leading-relaxed text-white/85 md:max-w-2xl md:flex-1 md:text-[16px] md:leading-[1.7]">
+                    SYNAX, ticari gürültüden uzak, gerçek underground rave kültürünü yaşatmak için
                     kuruldu.
                     <br />
                     Karanlık odalar, ağır baslar ve özgür bedenler.

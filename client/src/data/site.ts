@@ -1,10 +1,10 @@
 /** İçerik ve medya URL'leri — Durable şemasından türetildi */
 
 export const SITE = {
-  name: "SYNAPSE",
+  name: "SYNAX",
   email: "ahmetefeozturk010@gmail.com",
   orgDescription:
-    "SYNAPSE is an immersive underground rave platform based in Amsterdam. Dark aesthetic, purple and black palette.",
+    "SYNAX is an immersive underground rave platform based in Amsterdam. Dark aesthetic, purple and black palette.",
 } as const;
 
 export const NAV = [
@@ -67,7 +67,7 @@ export const TEAM = [
     name: "ucsekizalti",
     role: "Founder and Creative Director",
     description:
-      "Visionary behind SYNAPSE's dark aesthetic and immersive event concept.",
+      "Visionary behind Synax's dark aesthetic and immersive event concept.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/generated-content/headshots/fbef264d-9c28-43f0-920b-c2570811b147.png",
   },
@@ -75,7 +75,7 @@ export const TEAM = [
     name: "Sophie Verlaan",
     role: "Events and Operations Manager",
     description:
-      "Manages logistics and execution of SYNAPSE events across Amsterdam venues.",
+      "Manages logistics and execution of SYNAX events across Amsterdam venues.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/generated-content/headshots/955ca6ca-f417-46f5-b5d6-46ecd8046b80.png",
   },
@@ -84,7 +84,7 @@ export const TEAM = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Working with SYNAPSE brought our underground music community closer together.",
+      "Working with SYNAX brought our underground music community closer together.",
     name: "Alex van der Berg",
     title: "Founder, Amsterdam Underground Collective",
     image:
@@ -92,7 +92,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "SYNAPSE understands what makes the Amsterdam electronic music scene special.",
+      "SYNAX understands what makes the Amsterdam electronic music scene special.",
     name: "Marina Kowalski",
     title: "Venue Manager, North Holland Music Space",
     image:
@@ -108,7 +108,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "SYNAPSE's focus on creating immersive experiences matches our mission.",
+      "Synax's focus on creating immersive experiences matches our mission.",
     name: "Sophie Mercier",
     title: "Creative Director, Amsterdam Visuals Collective",
     image:
@@ -118,15 +118,15 @@ export const TESTIMONIALS = [
 
 export const FAQ_EN = [
   {
-    q: "What kind of events does SYNAPSE host?",
-    a: "SYNAPSE creates immersive underground rave experiences in Amsterdam with curated lineups and a full sensory experience.",
+    q: "What kind of events does SYNAX host?",
+    a: "SYNAX creates immersive underground rave experiences in Amsterdam with curated lineups and a full sensory experience.",
   },
   {
     q: "How do I buy tickets?",
     a: "Visit the /tickets page to browse upcoming events and secure your spot.",
   },
   {
-    q: "Where does SYNAPSE host its events?",
+    q: "Where does SYNAX host its events?",
     a: "Amsterdam underground venues — see /events for locations.",
   },
 ] as const;
@@ -167,41 +167,41 @@ export const TICKET_RULES_FAQ = [
 
 export const BRACELET_ITEMS = [
   {
-    title: "SYNAPSE - Black Kandi Bracelet",
+    title: "SYNAX - Black Kandi Bracelet",
     description:
       "Organizatörler veya sahneye yakın VIP'ler. Ortamı yöneten lead raverler.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/tcIpKCE-VLezQH7wzgmVYIW7kSsXzzSsb7kEF2.png",
   },
   {
-    title: "SYNAPSE - Red Kandi Bracelet",
+    title: "SYNAX - Red Kandi Bracelet",
     description:
       "İlişki aramayanlar, yalnız takılmak isteyenler için sınır belirten bileklik.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/M45nIT6-nM358VI29Cao6nve0lDjlQimiLQcVK.png",
   },
   {
-    title: "SYNAPSE - Blue Kandi Bracelet",
+    title: "SYNAX - Blue Kandi Bracelet",
     description:
       "Sadece cinsel açıdan etkileşim arayanlar için görsel iletişim rengi.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/LwBebdY-IVBWAPbqikW8o9rYbBOeRCBetLutBJ.png",
   },
   {
-    title: "SYNAPSE - Green Kandi Bracelet",
+    title: "SYNAX - Green Kandi Bracelet",
     description:
       "İlişki arayan, PLUR ruhunu benimseyen ve pozitif enerji yayan kişiler.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/4QGakqA-u3gFcf0me8WEJY4FgmccvCbG2Dgukk.png",
   },
   {
-    title: "SYNAPSE - Rainbow Kandi Bracelet",
+    title: "SYNAX - Rainbow Kandi Bracelet",
     description: "Açık fikirli, her türlü enerjiyi ve çeşitliliği kucaklayanlar.",
     image:
       "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/Untitled%20%283%29-81v2qKX1fdasnJlnsfWLlEDcDwWn6h.png",
   },
   {
-    title: "SYNAPSE - Yellow Kandi Bracelet",
+    title: "SYNAX - Yellow Kandi Bracelet",
     description:
       "İlk kez rave deneyimi yaşayanlar veya yeni katılımcılar için destek rengi.",
     image:

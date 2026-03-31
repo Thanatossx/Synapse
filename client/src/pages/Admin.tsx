@@ -12,7 +12,7 @@ import type {
   TicketApplication,
 } from "../types/data";
 
-const TOKEN_KEY = "synapse-admin-token";
+const TOKEN_KEY = "synax-admin-token";
 
 type Tab = "events" | "bracelets" | "applications";
 

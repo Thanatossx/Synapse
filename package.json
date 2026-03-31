@@ -1,8 +1,8 @@
 {
-  "name": "synapse",
+  "name": "synax",
   "private": true,
   "version": "1.0.0",
-  "description": "SYNAPSE underground rave site — React (Vite) + Express",
+  "description": "SYNAX underground rave site — React (Vite) + Express",
   "scripts": {
     "dev": "npm run dev --prefix client",
     "dev:server": "node server/index.js",

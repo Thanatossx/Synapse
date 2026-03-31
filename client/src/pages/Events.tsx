@@ -39,7 +39,7 @@ export function Events() {
                 SESİN İÇİNE İN
               </h1>
               <p className="mt-3 text-sm font-normal uppercase tracking-[0.18em] text-violet-200/70 md:text-base">
-                SYNAPSE RAVE EXPERIENCE
+                SYNAX RAVE EXPERIENCE
               </p>
             </div>
 
@@ -73,10 +73,10 @@ export function Events() {
               </div>
               <div className="relative z-10 flex flex-col items-center gap-5 text-center">
                 <h2
-                  className="synapse-cta-title-glow max-w-2xl text-balance font-semibold leading-tight text-[#faf8ff]"
+                  className="synax-cta-title-glow max-w-2xl text-balance font-semibold leading-tight text-[#faf8ff]"
                   style={{ fontSize: "clamp(1.35rem, 2.8cqi + 0.75rem, 2.1rem)" }}
                 >
-                  YERALTI SENİ BEKLİYOR, SYNAPSE
+                  YERALTI SENİ BEKLİYOR, SYNAX
                 </h2>
                 <div className="flex w-full max-w-md flex-col items-stretch gap-3 sm:max-w-none sm:flex-row sm:justify-center">
                   <Link
@@ -86,7 +86,7 @@ export function Events() {
                     Biletini AL
                   </Link>
                   <a
-                    href="https://face-tr.gta.world/profile/synapse"
+                    href="https://face-tr.gta.world/profile/synax"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex flex-1 items-center justify-center rounded-none border border-violet-400/55 bg-violet-950/25 px-5 py-2.5 text-sm font-semibold text-violet-100 shadow-[0_0_18px_rgba(139,92,246,0.2)] transition duration-300 hover:border-violet-300/70 hover:bg-violet-900/40 hover:text-white hover:shadow-[0_0_28px_rgba(139,92,246,0.45)] sm:flex-initial sm:px-7"

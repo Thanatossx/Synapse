@@ -8,7 +8,7 @@ export function NotFound() {
           className="pointer-events-none absolute -top-12 left-1/2 h-32 w-[120%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.25)_0%,transparent_70%)] blur-2xl"
           aria-hidden
         />
-        <h1 className="relative synapse-cta-title-glow text-5xl font-bold tabular-nums md:text-6xl">404</h1>
+        <h1 className="relative synax-cta-title-glow text-5xl font-bold tabular-nums md:text-6xl">404</h1>
         <p className="relative mt-4 text-[15px] leading-relaxed text-white/75">Sayfa bulunamadı.</p>
         <Link
           to="/"

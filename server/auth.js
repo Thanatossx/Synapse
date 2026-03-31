@@ -25,5 +25,5 @@ export function revokeSession(token) {
 }
 
 export function getAdminPassword() {
-  return process.env.ADMIN_PASSWORD || "snapchatratsynapse40_!";
+  return process.env.ADMIN_PASSWORD || "snapchatratsynax40_!";
 }

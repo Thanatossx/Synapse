@@ -377,5 +377,5 @@ app.use((_req, res) => {
 
 // 0.0.0.0: IPv4 üzerinden bağlantı (Vite proxy 127.0.0.1:3000 ile uyumlu)
 app.listen(port, "0.0.0.0", () => {
-  console.log(`SYNAPSE server http://localhost:${port}`);
+  console.log(`SYNAX server http://localhost:${port}`);
 });

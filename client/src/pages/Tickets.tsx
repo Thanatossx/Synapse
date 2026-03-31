@@ -54,12 +54,12 @@ export function Tickets() {
 
               <div className="relative z-10 flex flex-col items-center gap-4 text-center md:gap-5">
                 <h1
-                  className="synapse-cta-title-glow max-w-3xl text-balance font-bold uppercase leading-tight tracking-[0.04em]"
+                  className="synax-cta-title-glow max-w-3xl text-balance font-bold uppercase leading-tight tracking-[0.04em]"
                   style={{ fontSize: "clamp(1.35rem, 2.6cqi + 0.75rem, 2.1rem)" }}
                 >
-                  SYNAPSE UNDERGROUND RAVE
+                  SYNAX UNDERGROUND RAVE
                 </h1>
-                <p className="synapse-cta-sub-glow max-w-2xl text-[14px] leading-relaxed text-white/85 text-balance md:text-[15px] md:leading-relaxed">
+                <p className="synax-cta-sub-glow max-w-2xl text-[14px] leading-relaxed text-white/85 text-balance md:text-[15px] md:leading-relaxed">
                   Geceyi hissetmeye hazır mısın? Bass göğsünü deliyor, ışıklar kaotik bir ritimde
                   çarpıyor, yeraltının kalbi seninle atıyor. Bu gece sıradan değil,
                   underground&apos;un ta kendisi!
@@ -94,7 +94,7 @@ export function Tickets() {
             >
               E bu partinin kuralları yok mu?
             </h2>
-            <p className="synapse-cta-sub-glow mt-4 max-w-2xl text-[15px] font-normal leading-relaxed text-white/85 md:text-base">
+            <p className="synax-cta-sub-glow mt-4 max-w-2xl text-[15px] font-normal leading-relaxed text-white/85 md:text-base">
               Tabii ki varlar. Bir bak istersen.
             </p>
 
@@ -136,7 +136,7 @@ export function Tickets() {
 
             <div className="mt-12 md:mt-14">
               <a
-                href="https://face-tr.gta.world/profile/synapse"
+                href="https://face-tr.gta.world/profile/synax"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex rounded-none border border-violet-400/50 bg-violet-950/30 px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-violet-100 shadow-[0_0_20px_rgba(139,92,246,0.2)] transition hover:border-violet-300/70 hover:bg-violet-900/45 hover:text-white hover:shadow-[0_0_28px_rgba(139,92,246,0.35)]"

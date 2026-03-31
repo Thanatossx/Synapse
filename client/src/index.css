@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-synapse: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --color-synapse-root: #2c1249;
-  --color-synapse-black: #000000;
-  --color-synapse-text: #f9f9f9;
-  --color-synapse-muted: #dfdfdf;
-  --color-synapse-btn-gray: #7f7f7f;
-  --color-synapse-btn-primary: #353b57;
-  --color-synapse-card: rgba(255, 255, 255, 0.158);
+  --font-synax: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-synax-root: #2c1249;
+  --color-synax-black: #000000;
+  --color-synax-text: #f9f9f9;
+  --color-synax-muted: #dfdfdf;
+  --color-synax-btn-gray: #7f7f7f;
+  --color-synax-btn-primary: #353b57;
+  --color-synax-card: rgba(255, 255, 255, 0.158);
 }
 
 /* Hero spotlar — mix-blend + yumuşak nefes (opacity; transform korunur) */
-.synapse-hero-spot-wrap {
+.synax-hero-spot-wrap {
   position: relative;
   isolation: isolate;
   display: flex;
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.synapse-spot-layers {
+.synax-spot-layers {
   pointer-events: none;
   position: absolute;
   z-index: 0;
@@ -33,20 +33,20 @@
 }
 
 @media (min-width: 768px) {
-  .synapse-spot-layers {
+  .synax-spot-layers {
     width: min(90vw, 720px);
     height: min(38vw, 260px);
     max-height: 280px;
   }
 }
 
-.synapse-spot {
+.synax-spot {
   position: absolute;
   top: 50%;
   mix-blend-mode: screen;
 }
 
-@keyframes synapse-spot-sway {
+@keyframes synax-spot-sway {
   0%,
   100% {
     opacity: 0.82;
@@ -56,7 +56,7 @@
   }
 }
 
-@keyframes synapse-spot-sway-hard {
+@keyframes synax-spot-sway-hard {
   0%,
   100% {
     opacity: 0.88;
@@ -67,7 +67,7 @@
 }
 
 /* Geniş atmosferik koni (yumuşak) — soldan sahneye */
-.synapse-spot--left-soft {
+.synax-spot--left-soft {
   left: -12%;
   width: 58%;
   height: 220%;
@@ -81,11 +81,11 @@
     transparent 76%
   );
   filter: blur(26px);
-  animation: synapse-spot-sway 11s ease-in-out infinite;
+  animation: synax-spot-sway 11s ease-in-out infinite;
 }
 
 /* Dar parlak gövde — spot merkezi */
-.synapse-spot--left-hard {
+.synax-spot--left-hard {
   left: -4%;
   width: 22%;
   height: 85%;
@@ -98,10 +98,10 @@
     transparent 72%
   );
   filter: blur(10px);
-  animation: synapse-spot-sway-hard 9s ease-in-out infinite;
+  animation: synax-spot-sway-hard 9s ease-in-out infinite;
 }
 
-.synapse-spot--right-soft {
+.synax-spot--right-soft {
   right: -12%;
   width: 58%;
   height: 220%;
@@ -120,10 +120,10 @@
       transparent 74%
     );
   filter: blur(26px);
-  animation: synapse-spot-sway 11s ease-in-out infinite 1.2s;
+  animation: synax-spot-sway 11s ease-in-out infinite 1.2s;
 }
 
-.synapse-spot--right-hard {
+.synax-spot--right-hard {
   right: -4%;
   width: 22%;
   height: 85%;
@@ -136,21 +136,21 @@
     transparent 74%
   );
   filter: blur(10px);
-  animation: synapse-spot-sway-hard 9s ease-in-out infinite 0.8s;
+  animation: synax-spot-sway-hard 9s ease-in-out infinite 0.8s;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .synapse-spot--left-soft,
-  .synapse-spot--left-hard,
-  .synapse-spot--right-soft,
-  .synapse-spot--right-hard {
+  .synax-spot--left-soft,
+  .synax-spot--left-hard,
+  .synax-spot--right-soft,
+  .synax-spot--right-hard {
     animation: none;
     opacity: 1;
   }
 }
 
 /* Başlık glow — sabit text-shadow (animasyon her karede repaint yapıyordu) */
-.synapse-hero-title-glow {
+.synax-hero-title-glow {
   color: #faf8ff;
   text-shadow:
     0 0 12px rgba(221, 214, 254, 0.85),
@@ -159,7 +159,7 @@
     0 0 72px rgba(91, 33, 182, 0.18);
 }
 
-.synapse-cta-title-glow {
+.synax-cta-title-glow {
   color: #faf8ff;
   text-shadow:
     0 0 10px rgba(196, 181, 254, 0.65),
@@ -167,7 +167,7 @@
     0 0 40px rgba(91, 33, 182, 0.2);
 }
 
-.synapse-about-title-glow {
+.synax-about-title-glow {
   color: #faf8ff;
   text-shadow:
     0 0 10px rgba(196, 181, 254, 0.55),
@@ -183,8 +183,8 @@ html {
 body {
   margin: 0;
   min-height: 100dvh;
-  background-color: var(--color-synapse-root);
-  font-family: var(--font-synapse);
+  background-color: var(--color-synax-root);
+  font-family: var(--font-synax);
   -webkit-font-smoothing: antialiased;
 }
 

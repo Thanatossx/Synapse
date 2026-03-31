@@ -12,31 +12,13 @@ const dist = path.join(__dirname, "../client/dist");
 const app = express();
 const port = Number(process.env.PORT) || 3000;
 
-const corsOrigins = (process.env.CORS_ORIGIN || "")
-  .split(",")
-  .map((s) => s.trim())
-  .filter(Boolean);
-
-function corsOrigin(origin, cb) {
-  if (!origin) return cb(null, true);
-  if (corsOrigins.includes(origin)) return cb(null, true);
-  // Vercel preview URL'leri (hash'li *.vercel.app) — CORS_ORIGIN'de tek tek yazmana gerek kalmaz
-  if (process.env.CORS_ALLOW_VERCEL !== "0") {
-    try {
-      const u = new URL(origin);
-      if (u.protocol === "https:" && u.hostname.endsWith(".vercel.app")) return cb(null, true);
-    } catch {
-      /* ignore */
-    }
-  }
-  if (corsOrigins.length === 0) return cb(null, true);
-  return cb(new Error("Not allowed by CORS"));
-}
-
+// Tarayıcıdan gelen Origin'i yansıtır; Vercel preview + production + özel domain hepsi çalışır.
+// (cb(Error) ile reddetmek bazen CORS header'ı düşürüyordu; origin:true güvenilir.)
 app.use(
   cors({
-    origin: corsOrigin,
+    origin: true,
     allowedHeaders: ["Authorization", "Content-Type", "Accept"],
+    methods: ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   }),
 );
 

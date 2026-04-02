@@ -24,6 +24,28 @@ app.use(
 
 app.use(express.json({ limit: "1mb" }));
 
+/** Supabase'e gitmeden ortam kontrolü (Vercel log / Network'te teşhis) */
+app.get("/api/health", (_req, res) => {
+  res.json({
+    ok: true,
+    env: {
+      supabaseUrl: !!process.env.SUPABASE_URL,
+      supabaseServiceKey: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
+      adminPassword: !!process.env.ADMIN_PASSWORD,
+    },
+  });
+});
+
+app.use(async (req, res, next) => {
+  try {
+    await initOnce();
+  } catch (e) {
+    console.error("[synax] ensureSeededAndBackfill:", e);
+    return res.status(500).json({ error: String(e?.message || e) });
+  }
+  next();
+});
+
 function adminAuth(req, res, next) {
   const auth = req.headers.authorization || "";
   const token = auth.startsWith("Bearer ") ? auth.slice(7).trim() : "";

@@ -115,7 +115,11 @@ async function backfillEmptyEventForms() {
 
 export async function listEvents() {
   const sb = getSupabase();
-  const { data, error } = await sb.from("events").select("*").order("sort_order").order("created_at");
+  const { data, error } = await sb
+    .from("events")
+    .select("*")
+    .order("sort_order", { ascending: true })
+    .order("created_at", { ascending: true });
   if (error) throw new Error(error.message);
   return (data || []).map(rowToEvent);
 }

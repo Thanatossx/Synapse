@@ -86,7 +86,7 @@ export function Events() {
                     Biletini AL
                   </Link>
                   <a
-                    href="https://face-tr.gta.world/profile/nyx"
+                    href="https://face-tr.gta.world/page/nyx"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex flex-1 items-center justify-center rounded-none border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_16px_rgba(255,255,255,0.08)] transition duration-300 hover:border-white/35 hover:bg-white/10 sm:flex-initial sm:px-7"

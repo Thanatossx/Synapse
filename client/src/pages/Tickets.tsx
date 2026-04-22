@@ -134,7 +134,7 @@ export function Tickets() {
 
             <div className="mt-12 md:mt-14">
               <a
-                href="https://face-tr.gta.world/profile/nyx"
+                href="https://face-tr.gta.world/page/nyx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex rounded-none border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-[0_0_16px_rgba(255,255,255,0.08)] transition hover:border-white/35 hover:bg-white/10"

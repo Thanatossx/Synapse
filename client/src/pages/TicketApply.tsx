@@ -334,7 +334,7 @@ export function TicketApply() {
                   <button
                     type="button"
                     disabled={!eventId}
-                    className="inline-flex rounded-none bg-[#6d28d9] px-6 py-3 text-sm font-semibold text-white hover:bg-[#5b21b6] disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex rounded-none bg-white px-6 py-3 text-sm font-semibold text-black hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-40"
                     onClick={() => setStep(2)}
                   >
                     Devam et
@@ -382,7 +382,7 @@ export function TicketApply() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="inline-flex rounded-none bg-[#6d28d9] px-8 py-3 text-sm font-semibold text-white hover:bg-[#5b21b6] disabled:opacity-50"
+                      className="inline-flex rounded-none bg-white px-8 py-3 text-sm font-semibold text-black hover:bg-white/90 disabled:opacity-50"
                     >
                       {submitting ? "Gönderiliyor…" : "Gönder"}
                     </button>

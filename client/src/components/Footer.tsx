@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="w-full">
       <div className="relative overflow-hidden border-t border-white/15">
         <div
-          className="absolute inset-0 bg-gradient-to-b from-white/[0.12] via-black to-black"
+          className="absolute inset-0 bg-gradient-to-b from-white/[0.22] via-black to-black"
           aria-hidden
         />
         <div className="relative z-10 mx-auto flex max-w-[1536px] flex-col gap-12 px-6 py-12">

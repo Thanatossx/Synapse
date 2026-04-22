@@ -89,7 +89,7 @@ export function Admin() {
               {loginErr && <p className="text-sm text-red-300">{loginErr}</p>}
               <button
                 type="submit"
-                className="w-full rounded-none bg-[#6d28d9] py-3 text-sm font-semibold text-white hover:bg-[#5b21b6]"
+                className="w-full rounded-none bg-white py-3 text-sm font-semibold text-black hover:bg-white/90"
               >
                 Giriş
               </button>

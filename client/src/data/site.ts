@@ -1,10 +1,10 @@
 /** İçerik ve medya URL'leri — Durable şemasından türetildi */
 
 export const SITE = {
-  name: "SYNAX",
+  name: "NYX",
   email: "ahmetefeozturk010@gmail.com",
   orgDescription:
-    "SYNAX is an immersive underground rave platform based in Los Santos. Dark aesthetic, purple and black palette.",
+    "NYX is an immersive underground rave platform based in Los Santos. Dark aesthetic, black and white palette.",
 } as const;
 
 export const NAV = [

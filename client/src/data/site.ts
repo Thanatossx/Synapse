@@ -17,7 +17,6 @@ export const FOOTER_NAV = [
   { to: "/", label: "Anasayfa" },
   { to: "/events", label: "Etkinlikler" },
   { to: "/tickets", label: "Biletler" },
-  { to: "/about", label: "Hakkımızda" },
 ] as const;
 
 export const IMAGES = {

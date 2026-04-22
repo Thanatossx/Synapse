@@ -1,6 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import { About } from "./pages/About";
 import { Admin } from "./pages/Admin";
 import { Events } from "./pages/Events";
 import { Home } from "./pages/Home";
@@ -14,7 +13,6 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
           <Route path="events" element={<Events />} />
           <Route path="tickets" element={<Tickets />} />
           <Route path="tickets/apply" element={<TicketApply />} />

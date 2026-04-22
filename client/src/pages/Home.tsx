@@ -34,16 +34,13 @@ export function Home() {
                   fontSize: "clamp(2rem, 5cqi + 1.5rem, 3.75rem)",
                 }}
               >
-                <span className="block">welcome… we are</span>
-                <span className="mt-1 block md:mt-1.5">NYX, the dark side.</span>
+                <span className="block">welcome… we are NYX</span>
               </h1>
             </div>
 
             <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-7 text-center">
-              <p className="max-w-md text-[15px] leading-relaxed text-[#dfdfdf] md:max-w-lg md:text-base md:leading-relaxed">
-                NYX, yeraltı elektronik müzik ve rave kültürünün dijital izdüşümüdür. Biz bir topluluk değil,
-                enerjiyi ve ritmi paylaşan bir bilinç ağıyız. Bass, trance ve psytrance ile gecenin karanlığında
-                her şeyi dans pistinde birleşiyoruz.
+              <p className="max-w-md text-[15px] leading-relaxed text-white/70 md:max-w-lg md:text-base md:leading-relaxed">
+                based in ?
               </p>
             </div>
           </div>

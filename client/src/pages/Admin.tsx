@@ -5,7 +5,6 @@ import type {
   ApplicationForm,
   ApplicationStatus,
   EventStatus,
-  PublicBracelet,
   PublicEvent,
   Question,
   QuestionType,
@@ -14,7 +13,7 @@ import type {
 
 const TOKEN_KEY = "synax-admin-token";
 
-type Tab = "events" | "bracelets" | "applications";
+type Tab = "events" | "applications";
 
 const STATUS_LABELS: Record<ApplicationStatus, string> = {
   pending: "Beklemede",
@@ -109,7 +108,7 @@ export function Admin() {
           <div className="flex flex-col gap-4 border-b border-white/10 pb-6 md:flex-row md:items-center md:justify-between">
             <div>
               <h1 className="text-2xl font-bold text-white">Yönetim paneli</h1>
-              <p className="mt-1 text-sm text-white/55">Etkinlikler, bileklikler ve bilet başvuruları</p>
+              <p className="mt-1 text-sm text-white/55">Etkinlikler ve bilet başvuruları</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -132,7 +131,6 @@ export function Admin() {
             {(
               [
                 ["events", "Etkinlikler"],
-                ["bracelets", "Bileklikler"],
                 ["applications", "Başvurular"],
               ] as const
             ).map(([id, label]) => (
@@ -140,7 +138,7 @@ export function Admin() {
                 key={id}
                 type="button"
                 className={`rounded px-4 py-2 text-sm font-medium transition ${
-                  tab === id ? "bg-violet-600 text-white" : "bg-white/5 text-white/75 hover:bg-white/10"
+                  tab === id ? "bg-white text-black" : "bg-white/5 text-white/75 hover:bg-white/10"
                 }`}
                 onClick={() => setTab(id)}
               >
@@ -151,7 +149,6 @@ export function Admin() {
 
           <div className="mt-10">
             {tab === "events" && <EventsPanel token={token} onUnauthorized={onUnauthorized} />}
-            {tab === "bracelets" && <BraceletsPanel token={token} onUnauthorized={onUnauthorized} />}
             {tab === "applications" && <ApplicationsPanel token={token} onUnauthorized={onUnauthorized} />}
           </div>
         </div>
@@ -421,7 +418,7 @@ function EventsPanel({ token, onUnauthorized }: { token: string; onUnauthorized:
           </label>
         </div>
         <div className="flex flex-wrap gap-3">
-          <button type="submit" className="rounded bg-violet-600 px-4 py-2 text-sm font-medium text-white hover:bg-violet-500">
+          <button type="submit" className="rounded bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/90">
             {mode === "add" ? "Ekle" : "Kaydet"}
           </button>
           {mode === "edit" && (
@@ -437,7 +434,7 @@ function EventsPanel({ token, onUnauthorized }: { token: string; onUnauthorized:
       </form>
 
       {formEditId && formDraft && (
-        <div className="rounded-lg border border-violet-500/25 bg-white/[0.04] p-5">
+        <div className="rounded-lg border border-white/12 bg-white/[0.04] p-5">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold text-white">Başvuru formu</p>
@@ -449,7 +446,7 @@ function EventsPanel({ token, onUnauthorized }: { token: string; onUnauthorized:
             <div className="flex flex-wrap gap-2">
               <button
                 type="button"
-                className="rounded bg-violet-600 px-4 py-2 text-sm font-medium text-white hover:bg-violet-500 disabled:opacity-50"
+                className="rounded bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/90 disabled:opacity-50"
                 disabled={formBusy}
                 onClick={saveFormSchema}
               >
@@ -465,7 +462,7 @@ function EventsPanel({ token, onUnauthorized }: { token: string; onUnauthorized:
               </button>
               <button
                 type="button"
-                className="rounded border border-violet-500/30 bg-black/30 px-4 py-2 text-sm text-violet-200 hover:bg-black/40"
+                className="rounded border border-white/15 bg-black/30 px-4 py-2 text-sm text-white/80 hover:bg-black/40"
                 disabled={formBusy}
                 onClick={addQuestion}
               >
@@ -676,168 +673,15 @@ function EventsPanel({ token, onUnauthorized }: { token: string; onUnauthorized:
                 <td className="px-4 py-3 text-right">
                   <button
                     type="button"
-                    className="mr-2 text-violet-200 hover:underline"
+                    className="mr-2 text-white/80 hover:underline"
                     onClick={() => openFormEditor(ev)}
                   >
                     Form
                   </button>
-                  <button type="button" className="mr-2 text-violet-300 hover:underline" onClick={() => startEdit(ev)}>
+                  <button type="button" className="mr-2 text-white/80 hover:underline" onClick={() => startEdit(ev)}>
                     Düzenle
                   </button>
                   <button type="button" className="text-red-300 hover:underline" onClick={() => onDelete(ev.id)}>
-                    Sil
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {list.length === 0 && <p className="px-4 py-8 text-center text-white/50">Kayıt yok.</p>}
-      </div>
-    </div>
-  );
-}
-
-function BraceletsPanel({ token, onUnauthorized }: { token: string; onUnauthorized: () => void }) {
-  const [list, setList] = useState<PublicBracelet[]>([]);
-  const [mode, setMode] = useState<"add" | "edit">("add");
-  const [editId, setEditId] = useState<string | null>(null);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
-  const [msg, setMsg] = useState<string | null>(null);
-
-  const load = useCallback(async () => {
-    const data = await apiGet<PublicBracelet[]>("/api/bracelets");
-    setList(data);
-  }, []);
-
-  useEffect(() => {
-    load().catch((err) => {
-      if (err instanceof Error && err.message === "Yetkisiz") onUnauthorized();
-      setMsg("Liste yüklenemedi.");
-    });
-  }, [load]);
-
-  function resetForm() {
-    setMode("add");
-    setEditId(null);
-    setTitle("");
-    setDescription("");
-    setImage("");
-  }
-
-  function startEdit(b: PublicBracelet) {
-    setMode("edit");
-    setEditId(b.id);
-    setTitle(b.title);
-    setDescription(b.description);
-    setImage(b.image);
-  }
-
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setMsg(null);
-    try {
-      if (mode === "add") {
-        await apiSend("/api/bracelets", { method: "POST", token, body: { title, description, image } });
-        setMsg("Bileklik eklendi.");
-      } else if (editId) {
-        await apiSend(`/api/bracelets/${editId}`, {
-          method: "PUT",
-          token,
-          body: { title, description, image },
-        });
-        setMsg("Bileklik güncellendi.");
-      }
-      resetForm();
-      await load();
-    } catch (err) {
-      if (err instanceof Error && err.message === "Yetkisiz") onUnauthorized();
-      setMsg(err instanceof Error ? err.message : "İşlem başarısız");
-    }
-  }
-
-  async function onDelete(id: string) {
-    if (!confirm("Bu bilekliği silmek istediğinize emin misiniz?")) return;
-    setMsg(null);
-    try {
-      await apiSend(`/api/bracelets/${id}`, { method: "DELETE", token });
-      if (editId === id) resetForm();
-      setMsg("Silindi.");
-      await load();
-    } catch (err) {
-      if (err instanceof Error && err.message === "Yetkisiz") onUnauthorized();
-      setMsg(err instanceof Error ? err.message : "Silinemedi");
-    }
-  }
-
-  return (
-    <div className="space-y-8">
-      {msg && <p className="rounded border border-white/15 bg-white/5 px-4 py-3 text-sm text-white/85">{msg}</p>}
-
-      <form className="space-y-4 rounded-lg border border-white/10 bg-white/[0.04] p-5" onSubmit={onSubmit}>
-        <h2 className="text-lg font-semibold text-white">{mode === "add" ? "Yeni bileklik" : "Bilekliği düzenle"}</h2>
-        <label className="block">
-          <span className="text-sm text-white/70">Başlık</span>
-          <input
-            className="mt-1 w-full rounded border border-white/15 bg-black/40 px-3 py-2 text-white outline-none focus:border-white/35"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
-        </label>
-        <label className="block">
-          <span className="text-sm text-white/70">Açıklama</span>
-          <textarea
-            className="mt-1 min-h-[80px] w-full rounded border border-white/15 bg-black/40 px-3 py-2 text-white outline-none focus:border-white/35"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            required
-          />
-        </label>
-        <label className="block">
-          <span className="text-sm text-white/70">Görsel URL</span>
-          <input
-            className="mt-1 w-full rounded border border-white/15 bg-black/40 px-3 py-2 text-sm text-white outline-none focus:border-white/35"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-            required
-          />
-        </label>
-        <div className="flex flex-wrap gap-3">
-          <button type="submit" className="rounded bg-violet-600 px-4 py-2 text-sm font-medium text-white hover:bg-violet-500">
-            {mode === "add" ? "Ekle" : "Kaydet"}
-          </button>
-          {mode === "edit" && (
-            <button
-              type="button"
-              className="rounded border border-white/20 px-4 py-2 text-sm text-white/80 hover:bg-white/10"
-              onClick={resetForm}
-            >
-              İptal
-            </button>
-          )}
-        </div>
-      </form>
-
-      <div className="overflow-x-auto rounded-lg border border-white/10">
-        <table className="w-full min-w-[640px] text-left text-sm text-white/90">
-          <thead className="border-b border-white/10 bg-white/[0.06] text-white/70">
-            <tr>
-              <th className="px-4 py-3 font-medium">Başlık</th>
-              <th className="px-4 py-3 font-medium text-right">İşlem</th>
-            </tr>
-          </thead>
-          <tbody>
-            {list.map((b) => (
-              <tr key={b.id} className="border-b border-white/5 hover:bg-white/[0.03]">
-                <td className="px-4 py-3">{b.title}</td>
-                <td className="px-4 py-3 text-right">
-                  <button type="button" className="mr-2 text-violet-300 hover:underline" onClick={() => startEdit(b)}>
-                    Düzenle
-                  </button>
-                  <button type="button" className="text-red-300 hover:underline" onClick={() => onDelete(b.id)}>
                     Sil
                   </button>
                 </td>
@@ -1054,7 +898,7 @@ function ApplicationsPanel({ token, onUnauthorized }: { token: string; onUnautho
                 {orderedAnswerRows.length > 6 && (
                   <button
                     type="button"
-                    className="mt-2 text-xs font-semibold text-violet-200/90 underline-offset-2 hover:underline"
+                    className="mt-2 text-xs font-semibold text-white/70 underline-offset-2 hover:underline"
                     onClick={() => setExpanded((prev) => ({ ...prev, [a.id]: !isExpanded }))}
                   >
                     {isExpanded ? "Yanıtları gizle" : `Tüm yanıtları göster (${orderedAnswerRows.length})`}
@@ -1130,7 +974,7 @@ function ApplicationsPanel({ token, onUnauthorized }: { token: string; onUnautho
                   key={id}
                   type="button"
                   className={`rounded px-3 py-2 text-sm font-medium transition ${
-                    scope === id ? "bg-violet-600 text-white" : "bg-white/5 text-white/75 hover:bg-white/10"
+                    scope === id ? "bg-white text-black" : "bg-white/5 text-white/75 hover:bg-white/10"
                   }`}
                   onClick={() => {
                     setScope(id);

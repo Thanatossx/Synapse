@@ -6,7 +6,7 @@ import type { ApplicationForm, PublicEvent, Question } from "../types/data";
 
 function FieldCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-lg border border-violet-500/20 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] md:p-5">
+    <div className="rounded-lg border border-white/15 bg-white/[0.04] p-4 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] md:p-5">
       {children}
     </div>
   );
@@ -351,7 +351,7 @@ export function TicketApply() {
                     </span>
                     <button
                       type="button"
-                      className="ml-3 text-violet-300 underline-offset-2 hover:underline"
+                      className="ml-3 text-white/80 underline-offset-2 hover:underline"
                       onClick={() => setStep(1)}
                     >
                       Değiştir
@@ -388,7 +388,7 @@ export function TicketApply() {
                     </button>
                     <button
                       type="button"
-                      className="text-sm font-medium text-violet-300 hover:underline"
+                      className="text-sm font-medium text-white/80 hover:underline"
                       onClick={resetAll}
                     >
                       Formu temizle

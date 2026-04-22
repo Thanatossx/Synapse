@@ -4,9 +4,9 @@ import { FOOTER_NAV, SITE } from "../data/site";
 export function Footer() {
   return (
     <footer className="w-full">
-      <div className="relative overflow-hidden border-t border-violet-500/20">
+      <div className="relative overflow-hidden border-t border-white/15">
         <div
-          className="absolute inset-0 bg-gradient-to-b from-violet-950/[0.12] via-black to-black"
+          className="absolute inset-0 bg-gradient-to-b from-white/[0.06] via-black to-black"
           aria-hidden
         />
         <div className="relative z-10 mx-auto flex max-w-[1536px] flex-col gap-12 px-6 py-12">
@@ -14,7 +14,7 @@ export function Footer() {
             <div className="flex flex-col gap-8">
               <Link to="/" className="flex items-center">
                 <p
-                  className="min-w-0 bg-gradient-to-r from-white to-violet-200/90 bg-clip-text font-semibold text-transparent"
+                  className="min-w-0 bg-gradient-to-r from-white to-white/70 bg-clip-text font-semibold text-transparent"
                   style={{ fontSize: "clamp(1rem, 0.9rem + 0.4cqi, 1.25rem)" }}
                 >
                   {SITE.name}
@@ -27,7 +27,7 @@ export function Footer() {
                   <Link
                     key={item.to}
                     to={item.to}
-                    className="block break-inside-avoid py-2 text-sm text-[#f9f9f9] transition-colors hover:text-violet-200"
+                    className="block break-inside-avoid py-2 text-sm text-[#f9f9f9] transition-colors hover:text-white/80"
                   >
                     {item.label}
                   </Link>
@@ -37,7 +37,7 @@ export function Footer() {
           </div>
 
           <div
-            className="h-px w-full bg-gradient-to-r from-transparent via-violet-500/35 to-transparent"
+            className="h-px w-full bg-gradient-to-r from-transparent via-white/25 to-transparent"
             role="separator"
           />
 
@@ -46,10 +46,16 @@ export function Footer() {
               © {new Date().getFullYear()} {SITE.name}. All rights reserved.
             </p>
             <div className="flex flex-col gap-4 md:flex-row md:justify-end">
-              <Link to="/" className="text-sm text-[#cfcfcf] underline decoration-violet-500/40 underline-offset-4 transition hover:text-violet-200">
+              <Link
+                to="/"
+                className="text-sm text-[#cfcfcf] underline decoration-white/25 underline-offset-4 transition hover:text-white/80"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/" className="text-sm text-[#cfcfcf] underline decoration-violet-500/40 underline-offset-4 transition hover:text-violet-200">
+              <Link
+                to="/"
+                className="text-sm text-[#cfcfcf] underline decoration-white/25 underline-offset-4 transition hover:text-white/80"
+              >
                 Terms of Service
               </Link>
             </div>

@@ -2,13 +2,13 @@
 
 @theme {
   --font-synax: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --color-synax-root: #2c1249;
+  --color-synax-root: #000000;
   --color-synax-black: #000000;
   --color-synax-text: #f9f9f9;
   --color-synax-muted: #dfdfdf;
   --color-synax-btn-gray: #7f7f7f;
-  --color-synax-btn-primary: #353b57;
-  --color-synax-card: rgba(255, 255, 255, 0.158);
+  --color-synax-btn-primary: #ffffff;
+  --color-synax-card: rgba(255, 255, 255, 0.06);
 }
 
 /* Hero spotlar — mix-blend + yumuşak nefes (opacity; transform korunur) */
@@ -75,9 +75,9 @@
   transform: translateY(-50%) rotate(26deg) skewY(-2deg);
   background: linear-gradient(
     100deg,
-    rgba(220, 200, 255, 0.38) 0%,
-    rgba(147, 92, 255, 0.16) 38%,
-    rgba(91, 33, 182, 0.04) 58%,
+    rgba(255, 255, 255, 0.26) 0%,
+    rgba(255, 255, 255, 0.12) 38%,
+    rgba(255, 255, 255, 0.03) 58%,
     transparent 76%
   );
   filter: blur(26px);
@@ -93,8 +93,8 @@
   transform: translateY(-50%) rotate(24deg) skewY(-1deg);
   background: linear-gradient(
     100deg,
-    rgba(250, 245, 255, 0.55) 0%,
-    rgba(192, 160, 255, 0.2) 42%,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.16) 42%,
     transparent 72%
   );
   filter: blur(10px);
@@ -109,14 +109,14 @@
   transform: translateY(-50%) rotate(-26deg) skewY(2deg);
   background: radial-gradient(
       ellipse 45% 80% at 100% 50%,
-      rgba(230, 210, 255, 0.28) 0%,
-      rgba(139, 92, 246, 0.12) 42%,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.08) 42%,
       transparent 72%
     ),
     linear-gradient(
       260deg,
-      rgba(210, 180, 255, 0.35) 0%,
-      rgba(120, 70, 220, 0.1) 45%,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.08) 45%,
       transparent 74%
     );
   filter: blur(26px);
@@ -131,8 +131,8 @@
   transform: translateY(-50%) rotate(-24deg) skewY(1deg);
   background: linear-gradient(
     260deg,
-    rgba(252, 248, 255, 0.5) 0%,
-    rgba(180, 150, 255, 0.18) 45%,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.14) 45%,
     transparent 74%
   );
   filter: blur(10px);
@@ -151,28 +151,27 @@
 
 /* Başlık glow — sabit text-shadow (animasyon her karede repaint yapıyordu) */
 .synax-hero-title-glow {
-  color: #faf8ff;
+  color: #ffffff;
   text-shadow:
-    0 0 12px rgba(221, 214, 254, 0.85),
-    0 0 28px rgba(167, 139, 250, 0.55),
-    0 0 48px rgba(139, 92, 246, 0.32),
-    0 0 72px rgba(91, 33, 182, 0.18);
+    0 0 10px rgba(255, 255, 255, 0.55),
+    0 0 26px rgba(255, 255, 255, 0.24),
+    0 0 52px rgba(255, 255, 255, 0.14);
 }
 
 .synax-cta-title-glow {
-  color: #faf8ff;
+  color: #ffffff;
   text-shadow:
-    0 0 10px rgba(196, 181, 254, 0.65),
-    0 0 22px rgba(139, 92, 246, 0.38),
-    0 0 40px rgba(91, 33, 182, 0.2);
+    0 0 10px rgba(255, 255, 255, 0.42),
+    0 0 22px rgba(255, 255, 255, 0.18),
+    0 0 40px rgba(255, 255, 255, 0.12);
 }
 
 .synax-about-title-glow {
-  color: #faf8ff;
+  color: #ffffff;
   text-shadow:
-    0 0 10px rgba(196, 181, 254, 0.55),
-    0 0 22px rgba(139, 92, 246, 0.34),
-    0 0 38px rgba(91, 33, 182, 0.18);
+    0 0 10px rgba(255, 255, 255, 0.38),
+    0 0 22px rgba(255, 255, 255, 0.16),
+    0 0 38px rgba(255, 255, 255, 0.1);
 }
 
 /* Hızlı kaydırmada smooth-scroll jank yapabiliyor — kapalı */

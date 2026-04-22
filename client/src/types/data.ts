@@ -33,13 +33,6 @@ export type PublicEvent = {
   applicationForm?: ApplicationForm;
 };
 
-export type PublicBracelet = {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-};
-
 export type ApplicationStatus = "pending" | "accepted" | "issued" | "rejected";
 
 export type TicketApplication = {

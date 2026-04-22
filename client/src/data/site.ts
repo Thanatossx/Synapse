@@ -11,7 +11,6 @@ export const NAV = [
   { to: "/", label: "Anasayfa" },
   { to: "/events", label: "Etkinlikler" },
   { to: "/tickets", label: "Bilet ve Kurallar" },
-  { to: "/bracelet", label: "Bileklik Kültürü" },
 ] as const;
 
 export const FOOTER_NAV = [
@@ -162,49 +161,5 @@ export const TICKET_RULES_FAQ = [
     q: "P.L.U.R",
     a:
       "Son olarak, PLUR'u öğrenin ve yaşatın: Peace, Love, Unity, Respect — yani barış, sevgi, birlik ve hem kendinize hem başkalarına saygı ve sorumluluk.",
-  },
-] as const;
-
-export const BRACELET_ITEMS = [
-  {
-    title: "SYNAX - Black Kandi Bracelet",
-    description:
-      "Organizatörler veya sahneye yakın VIP'ler. Ortamı yöneten lead raverler.",
-    image:
-      "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/tcIpKCE-VLezQH7wzgmVYIW7kSsXzzSsb7kEF2.png",
-  },
-  {
-    title: "SYNAX - Red Kandi Bracelet",
-    description:
-      "İlişki aramayanlar, yalnız takılmak isteyenler için sınır belirten bileklik.",
-    image:
-      "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/M45nIT6-nM358VI29Cao6nve0lDjlQimiLQcVK.png",
-  },
-  {
-    title: "SYNAX - Blue Kandi Bracelet",
-    description:
-      "Sadece cinsel açıdan etkileşim arayanlar için görsel iletişim rengi.",
-    image:
-      "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/LwBebdY-IVBWAPbqikW8o9rYbBOeRCBetLutBJ.png",
-  },
-  {
-    title: "SYNAX - Green Kandi Bracelet",
-    description:
-      "İlişki arayan, PLUR ruhunu benimseyen ve pozitif enerji yayan kişiler.",
-    image:
-      "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/4QGakqA-u3gFcf0me8WEJY4FgmccvCbG2Dgukk.png",
-  },
-  {
-    title: "SYNAX - Rainbow Kandi Bracelet",
-    description: "Açık fikirli, her türlü enerjiyi ve çeşitliliği kucaklayanlar.",
-    image:
-      "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/Untitled%20%283%29-81v2qKX1fdasnJlnsfWLlEDcDwWn6h.png",
-  },
-  {
-    title: "SYNAX - Yellow Kandi Bracelet",
-    description:
-      "İlk kez rave deneyimi yaşayanlar veya yeni katılımcılar için destek rengi.",
-    image:
-      "https://rjdavx8ozyznxeyh.public.blob.vercel-storage.com/production/websites/uploaded-media/Untitled%20%284%29-n5daAsQ2my9ZeQQCTJtI7M6zvdkM9h.png",
   },
 ] as const;

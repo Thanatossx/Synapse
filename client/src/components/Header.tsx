@@ -28,7 +28,7 @@ export function Header() {
         <div className="relative flex min-h-[44px] items-center justify-center">
           <Link
             to="/"
-            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 font-bold uppercase tracking-wide text-white transition-colors duration-150 ease-out hover:text-violet-200"
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 font-bold uppercase tracking-wide text-white transition-colors duration-150 ease-out hover:text-white/80"
             style={{ fontSize: "clamp(1rem, 0.95rem + 0.2cqi, 1.125rem)" }}
           >
             {SITE.name}
@@ -45,8 +45,8 @@ export function Header() {
                 className={({ isActive }) =>
                   `whitespace-nowrap py-1 text-[15px] font-normal leading-none no-underline transition-colors duration-150 ease-out ${
                     isActive
-                      ? "text-violet-100 underline decoration-violet-400/60 underline-offset-4"
-                      : "text-white/90 hover:text-violet-200"
+                      ? "text-white underline decoration-white/35 underline-offset-4"
+                      : "text-white/90 hover:text-white"
                   }`
                 }
                 end={item.to === "/"}
@@ -69,13 +69,13 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-violet-500/20 bg-black px-6 py-4 md:hidden">
+        <div className="border-t border-white/15 bg-black px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-1">
             {NAV.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  className="block py-3 text-[15px] font-normal text-white no-underline transition-colors duration-150 ease-out hover:text-violet-200"
+                  className="block py-3 text-[15px] font-normal text-white no-underline transition-colors duration-150 ease-out hover:text-white/80"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

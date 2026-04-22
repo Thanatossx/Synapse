@@ -45,12 +45,6 @@ export function Home() {
                 enerjiyi ve ritmi paylaşan bir bilinç ağıyız. Bass, trance ve psytrance ile gecenin karanlığında
                 her şeyi dans pistinde birleşiyoruz.
               </p>
-              <Link
-                to="/events"
-                className="inline-flex items-center justify-center gap-2 rounded-none border border-white/25 bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-black shadow-[0_0_22px_rgba(255,255,255,0.14)] transition-[border-color,background-color,transform] duration-150 ease-out hover:border-white/40 hover:bg-white/90 active:translate-y-px md:self-end"
-              >
-                ETKİNLİKLER
-              </Link>
             </div>
           </div>
         </BlackSection>
@@ -82,12 +76,6 @@ export function Home() {
                     className="inline-flex flex-1 items-center justify-center gap-2 rounded-none border border-white/25 bg-white px-5 py-2.5 text-sm font-semibold text-black shadow-[0_0_20px_rgba(255,255,255,0.12)] transition-[border-color,background-color,transform] duration-150 ease-out hover:border-white/40 hover:bg-white/90 sm:flex-initial sm:px-7"
                   >
                     Bilet Al
-                  </Link>
-                  <Link
-                    to="/events"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-none border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_16px_rgba(255,255,255,0.08)] transition-[border-color,background-color,transform] duration-150 ease-out hover:border-white/35 hover:bg-white/10 sm:flex-initial sm:px-7"
-                  >
-                    Etkinlikler
                   </Link>
                 </div>
               </div>
